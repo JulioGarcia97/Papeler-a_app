@@ -7,6 +7,23 @@ $light: #9a9da4;
 $highlight: #8bc6db;
 $border: #E9E9E9;
 
+#notice_wrapper{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 999;
+	background-color: rgba(135, 216, 211, 0.85);
+	.alert, .notice{
+		padding: 2.5rem 0;
+		text-align: center;
+		margin: 0;
+		font-size: 1.25rem;
+		font-weight: 700;
+		color: #ffffff;
+		letter-spacing: 1px;
+	}
+}
+
 body{
 	font-family: 'Raleway', sans-serif;
 }
