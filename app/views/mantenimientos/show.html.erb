@@ -1,0 +1,15 @@
+<div class="modify-show">
+	<h4>Producto: <%= @mantenimiento.item %></h4>
+	<h5>SKU: <%= @mantenimiento.sku %></h5>
+	<h5>Cantidad: <%= @mantenimiento.quantity %></h5>
+	<h5>Categoria: <%= @mantenimiento.apartment %></h5>
+	<h5>Status: <%= @mantenimiento.status %></h5>
+	<p class="date"><%= @mantenimiento.created_at.strftime("%A, %b %d") %></p>
+	<% unless @mantenimiento.user.nil? %>
+		<p>Creado por: <%= @mantenimiento.user.email %></p>
+	<% end %>
+	<br>
+
+	<%= link_to "Edit", edit_mantenimiento_path, class:"link"%>
+	<%= link_to "Delete", mantenimiento_path, method: :delete, data: {confirm: "Estas seguro de eliminar el producto"}, class:"link" %>
+</div>

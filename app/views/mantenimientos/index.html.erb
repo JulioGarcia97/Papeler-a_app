@@ -1,0 +1,27 @@
+<div>
+	<table>
+		<thead>
+			<tr>
+				<th>Item</th>
+				<th>SKU</th>
+				<th>Cantidad</th>
+				<th>Departamento</th>
+				<th>Status</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<% @mantenimientos.each do |mantenimiento| %>
+				<tr>
+					<td><%= mantenimiento.item %></td>
+					<td><%= mantenimiento.sku %></td>
+					<td><%= mantenimiento.quantity %></td>
+					<td><%= mantenimiento.apartment %></td>
+					<td><%= mantenimiento.status %></td>
+					<td><%= link_to "Edit", edit_mantenimiento_path(mantenimiento), class:"link"%></td>
+					<td><%= link_to "Delete", mantenimiento, method: :delete, data: {confirm: "Estas seguro de eliminar el producto"}, class:"link" %></td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>	
+</div>

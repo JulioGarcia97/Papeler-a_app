@@ -1,0 +1,16 @@
+<%= form_for :transaccion do |f| %>
+	<div class="contenedor">
+		<div class="form-style-9">
+			<%= f.text_field :item, placeholder:"Item", class:"forms"%>
+
+			<%= f.number_field :quantity, placeholder:"Cantidad", class:"forms" %>
+
+			<%= f.number_field :po, placeholder:"P.O", class:"forms" %>
+
+			<%= f.number_field :requi, placeholder:"Requisicion", class:"forms" %>
+
+			<%= f.submit "Guardar", class:"forms btn-trans" %>
+		</div>
+	</div>
+	
+<% end %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  item: MyString
+  sku: 1
+  quantity: 1
+  status: MyString
+  apartment: MyString
+
+two:
+  item: MyString
+  sku: 1
+  quantity: 1
+  status: MyString
+  apartment: MyString

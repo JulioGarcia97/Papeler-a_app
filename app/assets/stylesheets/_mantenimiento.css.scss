@@ -1,0 +1,37 @@
+.search .move{
+	margin-top: 100px;
+	margin-left: 300px;
+	margin-bottom: 330px;
+}.form{
+	width: 5%;
+	background-image: url('searchicon.png');
+	background-size: 60px;
+	background-position: 0;
+	background-color: white;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 2px solid $border;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+#second_navigation{
+	ul{
+		list-style-type: none;
+		text-align: left;
+		margin-top: 50px;
+	}
+	li{
+		margin: 0 10px 0 0;
+		border-right: 1px solid #424652;
+		margin-left: 20px;
+
+	}
+	li a{
+		text-decoration: none;
+		color: #CAC6C6;
+		&:hover{
+			color: $highlight;
+		}
+	}
+}

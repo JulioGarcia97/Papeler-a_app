@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+	<title>TnB - Papeleria</title>
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,700'	rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  	<header id="main_navigation" class="clearfix">
+		<%= link_to "Papeleria", root_path, class:"name" %>
+
+		<nav>
+			<%= link_to "Mantenimiento", mantenimientos_path %>
+			<%= link_to "Transaccion", transacciones_path %>
+			<a href="#">Contacto</a>
+			<% if user_signed_in? %>
+				<%= link_to "Cerrar Sesion", destroy_user_session_path, method: :delete %>
+			<% else %>
+				<%= link_to "Iniciar Sesion", new_user_session_path %>
+				<%= link_to "Crear Cuenta", new_user_registration_path %>
+			<% end %>
+		</nav>
+	</header>
+	
+	<div id="sidebar">
+		<ul>
+			<li class="category">Tipos de Transaccion</li>
+			<li><a href="/transacciones/entradas">Entradas</a></li>
+			<li><a href="">Salidas</a></li>
+		</ul>
+		<p class="name-julio">&copy; 2016 Julio Garcia</p>
+	</div>
+
+    <%= yield %>
+
+  </body>
+</html>
