@@ -1,4 +1,12 @@
-<div class="search">
-	<input class="forms move" type="text" placeholder="Search">
-	<%= submit_tag " ", class:"form" %>
+<div id="resultados">
+	
 </div>
+
+<%= form_tag "/search/create", method: :get, remote: true do %>
+	<div class="search">
+		<%= text_field_tag :keyword, nil, placeholder:"Search", class:"forms move" %>
+		<%= content_tag :button, type: :submit, class:"form" do %>
+			.
+		<%end%>
+	</div>
+<% end %>
