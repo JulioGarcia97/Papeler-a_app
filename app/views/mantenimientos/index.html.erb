@@ -2,8 +2,10 @@
 	<table>
 		<thead>
 			<tr>
+				<th>Codigo</th>
 				<th>Item</th>
 				<th>SKU</th>
+				<th>Cantidad Minima</th>
 				<th>Cantidad</th>
 				<th>Departamento</th>
 				<th>Status</th>
@@ -13,8 +15,10 @@
 		<tbody>
 			<% @mantenimientos.each do |mantenimiento| %>
 				<tr>
+					<td><%= mantenimiento.codigo %></td>
 					<td><%= mantenimiento.item %></td>
 					<td><%= mantenimiento.sku %></td>
+					<td><%= mantenimiento.minimum_quantity %></td>
 					<td><%= mantenimiento.quantity %></td>
 					<td><%= mantenimiento.apartment %></td>
 					<td><%= mantenimiento.status %></td>

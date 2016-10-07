@@ -8,6 +8,12 @@
   	<br>
   	<br>
 
+  	<%= f.label :codigo, "Ingresa el Codigo" %><br>
+  	<%= f.number_field :codigo, class:"forms" %>
+
+  	<br>
+  	<br>
+
 	<%= f.label :item, "Escribe el Producto" %><br>
 	<%= f.text_field :item, class:"forms"%>
 
@@ -20,8 +26,14 @@
 	<br>
 	<br>
 
-	<%= f.label :quantity, "Cantidad" %> <br>
-	<%= f.number_field :quantity, class:"forms" %>
+	<%= f.label :minimum_quantity, "Cantidad Minima" %><br>
+	<%= f.number_field :minimum_quantity, class:"forms" %>
+
+	<br>
+	<br>
+	
+	<%= f.label :quantity, "Cantidad"%> <br>
+	<%= f.number_field :quantity, class:"forms"%>
 
 	<br>
 	<br>

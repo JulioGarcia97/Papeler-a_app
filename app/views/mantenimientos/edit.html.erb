@@ -1,2 +1,61 @@
 <h1>Editar Producto</h1>
-<%= render "form" %>
+<%= form_for(@mantenimiento) do |f| %>
+  <% @mantenimiento.errors.full_messages.each do |message| %>
+    <div class="error">
+      <%= message %>
+    </div>
+  <% end %>
+  <div class="modify">
+  	<br>
+  	<br>
+
+  	<%= f.label :codigo, "Ingresa el Codigo" %><br>
+  	<%= f.number_field :codigo, class:"forms" %>
+
+  	<br>
+  	<br>
+
+	<%= f.label :item, "Escribe el Producto" %><br>
+	<%= f.text_field :item, class:"forms"%>
+
+	<br>
+	<br>
+
+	<%= f.label :sku, "SKU" %> <br>
+	<%= f.number_field :sku, class:"forms" %>
+
+	<br>
+	<br>
+
+	<%= f.label :minimum_quantity, "Cantidad Minima" %><br>
+	<%= f.number_field :minimum_quantity, class:"forms" %>
+
+	<br>
+	<br>
+
+	<%= f.label :apartment, "Categoria del Producto" %> <br>
+	
+	<%= f.select(:apartment) do %>
+		<% [["Papeleria", "Papeleria"], ["Cartuchos", "Cartuchos"], ["Toner", "Toner"]].each do |t|%>
+			<%= content_tag(:option, t.first, value: t.last) %>
+		<% end %>
+	<% end %>
+
+	<br>
+	<br>
+	
+	<%= f.label :status, "Status" %> <br>
+
+	<%= f.select(:status) do %>
+	  <% [["Activo", "Activo"],["Inactivo","Inactivo"]].each do |s| %>
+	    <%= content_tag(:option, s.first, value: s.last) %>
+	  <% end %>	
+	<% end %>
+
+	<br>
+	<br>
+
+	<%= f.submit "Guardar", class:"btn" %>
+  </div>
+
+<%end%>

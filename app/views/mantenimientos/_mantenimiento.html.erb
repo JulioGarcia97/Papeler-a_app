@@ -1,8 +1,19 @@
-<div>
-	<strong> <%= mantenimiento.item %></strong>
-	<%= mantenimiento.sku %>
-	<%= mantenimiento.quantity %>
-	<%= mantenimiento.apartment %>
-	<%= mantenimiento.status %>
-	<%= link_to "Ver Producto", mantenimiento%>
-</div>
+<% if :keyword == mantenimiento %>
+	<%= link_to "Nuevo Producto" , new_mantenimiento_path %>
+	<h1>hola</h1>
+<%else%>
+	<div>
+		<strong><%= mantenimiento.item %></strong>
+		<%= mantenimiento.sku %>
+		<%= mantenimiento.quantity %>
+		<%= mantenimiento.apartment %>
+		<%= mantenimiento.status %>
+		<%= link_to "Ver Producto", mantenimiento%>
+	</div>
+
+<%end%>
+
+
+
+
+

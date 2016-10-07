@@ -43,7 +43,7 @@ class MantenimientosController < ApplicationController
 
 
 	def mantenimiento_params
-		params.require(:mantenimiento).permit(:item, :sku, :quantity, :status, :apartment, :users)
+		params.require(:mantenimiento).permit(:codigo, :item, :sku, :minimum_quantity, :quantity, :status, :apartment, :users)
 	end
 
 	def find_params
